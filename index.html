@@ -2979,7 +2979,7 @@ function ftcQHTML() {
 
 /* ---------------- page ---------------- */
 function page() {
-  return header('Adding Up', [['#sec-rects', 'Rectangles'], ['#sec-table', 'Table'], ['#sec-ftc', 'FTC Part I'], ['#close', 'Back to Paul']]) +
+  return header('Adding Up', [['#sec-rects', 'Rectangles'], ['#sec-table', 'Table'], ['#sec-ftc', 'FTC Part I'], ['#close', 'Back to Unit 11']]) +
     '<main id="top">' + hero({ kicker: 'Calculus I · Unit 11', title: 'Adding Up',
       dek: 'Use Sections 1 and 2 after Paul’s [Area Problem](' + PAUL + 'AreaProblem.aspx), and Section 3 after Part I of the Fundamental Theorem of Calculus in [Definition of the Definite Integral](' + PAUL + 'DefnOfDefiniteIntegral.aspx). You will change the rule and the number of rectangles, add up a table of speeds, and drag an upper limit to see FTC Part I as a picture.' }) +
 
@@ -2996,7 +2996,7 @@ function page() {
     col(blk('speed-tb', speedTableHTML) + blk('speed-q', speedQHTML)) +
 
     sec('sec-ftc', '3', 'The Area So Far: FTC Part I', '') +
-    prose('', ['If you have not yet read Part I of the Fundamental Theorem in Paul’s [Definition of the Definite Integral](' + PAUL + 'DefnOfDefiniteIntegral.aspx), go to [Back to Paul](#close) now and return here after it.',
+    prose('', ['Part I of the Fundamental Theorem is in Paul’s [Definition of the Definite Integral](' + PAUL + 'DefnOfDefiniteIntegral.aspx), which section 4 of Unit 11: Adding Up: The Definite Integral has you read before this page.',
       'Paul defines `g(x) = I{a}{x} f(t) dd{t}`, the net area under `f` from `a` to `x`. He writes `t` inside the integral because `x` is already the upper limit. Here `a = 0`.',
       'Drag the point on the graph of `f`, and the lower graph traces `g`. When `x` moves right by a small step `Δx`, the area grows by a thin strip of height about `f(x)`, so `g` grows by about `f(x) Δx`. The slope of `g` is that change divided by `Δx`, which is about `f(x)`. With the second function, `g` falls where `f` is negative.']) +
     col(toggle('afn', AFNS.map(function (fo) { return '`' + fo.name + '`'; }), { label: 'Choose the function f', redraw: ['fig-area-so-far', 'fig-acc', 'acc-read'] }) +
@@ -3004,8 +3004,8 @@ function page() {
       '<p class="ptext" style="margin-top:22px">' + P('The slope of `g` matches the height of `f` at every `x`. That is FTC Part I.') + '</p><p class="disp">' + M('Dx I{a}{x} f(t) dd{t} = f(x)') + '</p>' +
       blk('ftc-q', ftcQHTML)) +
 
-    sec('close', '', 'Back to Paul', '') +
-    prose('', ['Work Practice Problems 1 and 4 of [Area Problem](https://tutorial.math.lamar.edu/Problems/CalcI/AreaProblem.aspx), then read [Definition of the Definite Integral](' + PAUL + 'DefnOfDefiniteIntegral.aspx) and return for Section 3. If you came back from Part I of the Fundamental Theorem, continue with Example 6 there.']) +
+    sec('close', '', 'Back to Unit 11', '') +
+    prose('', ['Return to section 4 of Unit 11: Adding Up: The Definite Integral and continue with its notes on Example 6(b).']) +
     '</main>';
 }
 expose({ riemann: riemann, RFNS: RFNS, speedSum: speedSum, AFNS: AFNS, gSlope: gSlope, g10: g10, q13: q13 });
